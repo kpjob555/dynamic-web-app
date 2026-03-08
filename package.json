@@ -1,0 +1,31 @@
+{
+  "name": "dynamic-web-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^12.35.1",
+    "react": "19",
+    "react-dom": "19",
+    "react-router-dom": "^7.13.1",
+    "styled-components": "^6.3.11",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
