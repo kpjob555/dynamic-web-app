@@ -10,7 +10,7 @@ import { Body } from '../../components/Body'
 import { Table } from '../../components/Table'
 import { SubmitButton } from '../../components/SubmitButton'
 import { Modal } from '../../components/Modal'
-import { TextField } from '../../components/TextField'
+import { JsonEditor } from '../../components/JsonEditor'
 import { HeaderLabel } from '../../components/HeaderLabel'
 import { ContentLabel } from '../../components/ContentLabel'
 import { Rows } from '../../components/Rows'
@@ -305,14 +305,13 @@ export function ConfigurationPage(): React.ReactElement {
                 transition={{ duration: 0.2 }}
               >
                 <Rows gap={20}>
-                  <TextField
-                    label="JSON Configuration"
+                  <JsonEditor
                     value={formData}
                     onChange={(value) => {
                       setFormData(value)
                       setError('')
                     }}
-                    style={{ minHeight: '350px', fontFamily: 'monospace' }}
+                    error={error}
                   />
                   {error && <p style={{ color: '#f87171', fontSize: '14px' }}>{error}</p>}
                   <div style={{ display: 'flex', gap: '12px' }}>
